@@ -1,0 +1,80 @@
+// *****************
+// Chancellor Griffin
+// June 2016
+// Basic Calculator w/ operators
+// ******************
+
+
+
+#include <iostream>
+
+using namespace std;
+
+#include <stdlib.h> // needed so we can use EXIT
+
+void main()
+{
+	char Op;
+	bool ValidOp;
+	int Num1;
+	int Num2;
+	int Num3;
+
+	/* 0230 6/22, The switch for the valid operation works, unsure where to put Num1 for my first number. */
+
+	cout << "Welcome to Chancellors Basic Calculator, Please enter your first number:\n";
+	cin >> Num1;
+	cout << "You Entered: " << Num1 << endl;
+
+	do {	
+			
+			cout << "Enter your operator: ";
+			cin >> Op;			// Read First Operator
+			switch (Op)				//Check if valid
+			{
+			case '+':
+				ValidOp = true;
+				break;
+			case '*':
+			case '-':
+			case '/':
+				ValidOp = true;
+				break;
+			case 'C':
+			case 'c':
+				cout << "=> 0\n=> ";
+				cin >> Num1;
+				ValidOp = false;
+				break;
+			case 'X':
+			case 'x':
+				cout << "Bye" << endl;
+				exit(0); // Terminate the program
+				break;
+			default:
+				cout << "Invalid, please enter +-*/ C or X " << endl;
+				ValidOp = false;
+
+
+			}
+		} while (!ValidOp);	// ! means NOT, same as while (Validop == false); 
+
+		cout << "Please enter your second number:  ";
+		cin >> Num2;
+		cout << "You've entered: " << Num1 << Op << Num2 << endl;
+
+		Num3 = Num1; Op; Num2; // How do I get the answer tho?
+
+		cout << "Answer: " << Num3 << endl;
+
+		
+
+
+		// Read Second Number
+		// Do Math
+		// Show Answer
+
+
+
+
+}
