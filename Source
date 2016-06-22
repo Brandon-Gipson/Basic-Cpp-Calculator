@@ -25,7 +25,8 @@ void main()
 	cout << "Welcome to Chancellors Basic Calculator, Please enter your first number:\n";
 	cin >> Num1;
 	cout << "You Entered: " << Num1 << endl;
-
+while {
+	ValidOp = false;
 	do {	
 			cout << "Enter your operator: ";
 			cin >> Op;			// Read First Operator
@@ -84,7 +85,7 @@ void main()
 		cout << "Answer is: " << Num3 << endl;
 
 
-
+	}
 
 		
 
