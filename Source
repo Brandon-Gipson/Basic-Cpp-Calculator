@@ -27,7 +27,6 @@ void main()
 	cout << "You Entered: " << Num1 << endl;
 
 	do {	
-			
 			cout << "Enter your operator: ";
 			cin >> Op;			// Read First Operator
 			switch (Op)				//Check if valid
@@ -36,7 +35,11 @@ void main()
 				ValidOp = true;
 				break;
 			case '*':
+				ValidOp = true;
+				break;
 			case '-':
+				ValidOp = true;
+				break;
 			case '/':
 				ValidOp = true;
 				break;
@@ -63,9 +66,25 @@ void main()
 		cin >> Num2;
 		cout << "You've entered: " << Num1 << Op << Num2 << endl;
 
-		Num3 = Num1; Op; Num2; // How do I get the answer tho?
+		{
+			if (Op == '+') { Num3 = Num1 + Num2; }
+			else;
+			if (Op == '-') { Num3 = Num1 - Num2; }
+			else;
+			if (Op == '/') { Num3 = Num1 / Num2; }
+			else;
+			if (Op == '*') { Num3 = Num1 * Num2; }
+			else;
+		}
 
-		cout << "Answer: " << Num3 << endl;
+
+
+
+
+		cout << "Answer is: " << Num3 << endl;
+
+
+
 
 		
 
